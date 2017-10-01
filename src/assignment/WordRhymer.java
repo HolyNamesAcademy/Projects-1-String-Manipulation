@@ -23,7 +23,7 @@ public class WordRhymer {
      * @param word2Phonemes the phonemes for the second word
      * @return whether the two sets of phonemes match at their last few (3).
      */
-    private boolean finalPhonemesMatch(String[] word1Phonemes, String[] word2Phonemes) {
+    public static boolean finalPhonemesMatch(String[] word1Phonemes, String[] word2Phonemes) {
         return false;
     }
 }

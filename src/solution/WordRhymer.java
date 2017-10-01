@@ -50,7 +50,7 @@ public class WordRhymer {
      * @param word2Phonemes the phonemes for the second word
      * @return whether the two sets of phonemes match at their last few (3).
      */
-    private boolean finalPhonemesMatch(String[] word1Phonemes, String[] word2Phonemes) {
+    public static boolean finalPhonemesMatch(String[] word1Phonemes, String[] word2Phonemes) {
         int len1 = word1Phonemes.length;
         int len2 = word2Phonemes.length;
         int minPhonemes = Math.min(len1, len2);
