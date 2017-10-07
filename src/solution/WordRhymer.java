@@ -10,6 +10,7 @@ public class WordRhymer {
 
     public WordRhymer() {
         this.cmuDict = new CmuDict();
+        System.out.println(cmuDict.getDictLines().size());
     }
 
     /**
