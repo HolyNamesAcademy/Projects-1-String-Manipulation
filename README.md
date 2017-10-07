@@ -33,7 +33,9 @@ rhyming words they want to find.
 
 #### CmuDictTest
 
+This class contains tests for the CmuDict class.
+
 #### WordRhymerTest
 
-## More about the CMU Pronunciation Dictionary
+This class contains test for the WordRhymer class.
 
