@@ -49,13 +49,13 @@ public class WordRhymer {
      * Determine whether two sets of phonemes have the same final few phonemes.
      * @param word1Phonemes the phonemes for the first word
      * @param word2Phonemes the phonemes for the second word
-     * @return whether the two sets of phonemes match at their last few (3).
+     * @return whether the two sets of phonemes match at their last few (5).
      */
     public static boolean finalPhonemesMatch(String[] word1Phonemes, String[] word2Phonemes) {
         int len1 = word1Phonemes.length;
         int len2 = word2Phonemes.length;
         int minPhonemes = Math.min(len1, len2);
-        int numPhonemesToCompare = Math.min(3, minPhonemes);
+        int numPhonemesToCompare = Math.min(5, minPhonemes);
         for (int i = 0; i < numPhonemesToCompare; i++) {
             String phoneme1 = word1Phonemes[len1 - 1 - i];
             String phoneme2 = word2Phonemes[len2 - 1 - i];

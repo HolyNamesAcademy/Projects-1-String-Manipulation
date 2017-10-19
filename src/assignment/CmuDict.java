@@ -37,7 +37,7 @@ public class CmuDict {
     }
 
     /**
-     * Get the word component of a solution.CmuDict line
+     * Get the word component of a solution.CmuDict line. Return the empty string if the line is invalid.
      * @param dictLine the dictionary line we want to extract the word from
      * @return the word part of dictLine
      */
@@ -46,7 +46,7 @@ public class CmuDict {
     }
 
     /**
-     * Get the phonemes for a word from a CmuDict line
+     * Get the phonemes for a word from a CmuDict line. Return an empty array if the line is invalid.
      * @param dictLine the line we want to get the phonemes from
      * @return an array containing the phonemes of the word in order.
      */
@@ -55,7 +55,8 @@ public class CmuDict {
     }
 
     /**
-     * Find the line in the dictionary that corresponds to the given word
+     * Find the line in the dictionary that corresponds to the given word. Return the empty string if the word cannot
+     * be found.
      * @param word the word we want to find the line for
      * @return The line from dictLines which corresponds to word. If none is found, return the empty string.
      */
