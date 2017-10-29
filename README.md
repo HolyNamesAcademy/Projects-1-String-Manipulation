@@ -255,27 +255,27 @@ Follow the guidelines in the IntelliJ Setup page to turn in your assignment.
 
 ## Grading Rubric
 
-<h3>CmuDict</h3> | <h3>20 points</h3>
-:--- | ---:
-isWordEntry() | 5 points
-getWord() | 5 points
-getPhonemes() | 5 points
-getDictLineForWord() | 5 points
-<h3>WordRhymer</h3> | <h3>20 points</h3>
-finalPhonemesMatch() | 5 points
-findRhymingWords() | 15 points
-<h3>CmuDictTest (5 points per test)</h3> | <h3>30 points</h3>
-<h3>WordRhymerTest (5 points per test)</h3> | <h3>20 points</h3>
-<h3>Code Quality</h3> | <h3>20 points</h3>
-No compile errors | 10 pts
-[Code spaced and indented properly](https://stackoverflow.com/questions/17879475/how-enable-auto-format-code-for-intellij-idea) | 10 pts
-[Descriptive variable names](http://www.makinggoodsoftware.com/2009/05/04/71-tips-for-naming-variables) | 5 pts
-<h3>Administrative</h3> | <h3>20 pts</h3>
-Correctly pushed to GitHub | 5 pts
-Turned in on time | 15 pts
-<h3>Extra Credit</h3> | <h3>20 points</h3>
-Handling bogus input in CmuDict methods | 5 points
-Making CmuDict more efficient | 5 points
-Improving the rhyming algorithm | 5 points
-Rhyme words that aren't in the dictionary | 5 points
-<h3>Total</h3> (not including extra credit) | <h3>130 pts</h3>
+| <h3>CmuDict</h3> | <h3>20 pts</h3> |
+| :------------- | -----: |
+| isWordEntry() | 5 pts |
+| getWord() | 5 pts |
+| getPhonemes() | 5 pts |
+| getDictLineForWord() | 5 pts |
+| <h3>WordRhymer</h3> | <h3>20 pts</h3> |
+| finalPhonemesMatch() | 5 pts |
+| findRhymingWords() | 15 pts |
+| <h3>CmuDictTest (5 points per test)</h3> | <h3>30 pts</h3> |
+| <h3>WordRhymerTest (5 points per test)</h3> | <h3>20 pts</h3> |
+| <h3>Code Quality</h3> | <h3>20 pts</h3> |
+| No compile errors | 10 pts |
+| [Code spaced and indented properly](https://stackoverflow.com/questions/17879475/how-enable-auto-format-code-for-intellij-idea) | 10 pts |
+| [Descriptive variable names](http://www.makinggoodsoftware.com/2009/05/04/71-tips-for-naming-variables) | 5 pts |
+| <h3>Administrative</h3> | <h3>20 pts</h3> |
+| Correctly pushed to GitHub | 5 pts |
+| Turned in on time | 15 pts |
+| <h3>Extra Credit</h3> | <h3>20 pts</h3> |
+| Handling bogus input in CmuDict methods | 5 pts |
+| Making CmuDict more efficient | 5 pts |
+| Improving the rhyming algorithm | 5 pts |
+| Rhyme words that aren't in the dictionary | 5 pts |
+| <h3>Total</h3> (not including extra credit) | <h3>130 pts</h3> |
