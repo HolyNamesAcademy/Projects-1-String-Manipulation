@@ -86,11 +86,14 @@ For more information about CMUDict, check out http://www.speech.cs.cmu.edu/cgi-b
 
 ## Program Contents
 
-The program contains three application classes, `CmuDict`, `WordRhymer`, and `Main`, as well as two test classes,
-`CmuDictTest` and `WordRhymerTest`. You will make changes to `CmuDict`, `WordRhymer`, `CmuDictTest`, and
-`WordRhymerTest`.
+The program contains two packages: *rhymingwords* and *test*. The *rhymingwords* package contains three application
+classes: `CmuDict`, `WordRhymer`, and `Main`. The *test* package contains two test classes: `CmuDictTest` and
+`WordRhymerTest`. You will make changes to `CmuDict`, `WordRhymer`, `CmuDictTest`, and `WordRhymerTest`.
 
 ### Application Classes
+
+These classes contain the code for the word rhyming application you'll be writing. To run the program, select the "Main"
+run configuration at the top right corner of the screen and click the green triangle (the "run" button) to the right.
 
 #### Main
 
@@ -142,6 +145,10 @@ You'll need to implement the following methods in the WordRhymer class:
    include the word itself as a rhyming word in the list you return.
 
 ### Test Classes
+
+These classes contain the test code for classes defined in the *rhymingwords* package. Each of the two classes has its
+own run configuration. To run the tests for a given test class, select the corresponding configuration at the top right
+corner of the screen and click the run button to the right.
 
 #### CmuDictTest
 
