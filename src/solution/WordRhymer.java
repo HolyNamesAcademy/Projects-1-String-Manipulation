@@ -55,7 +55,7 @@ public class WordRhymer {
         int len1 = word1Phonemes.length;
         int len2 = word2Phonemes.length;
         int minPhonemes = Math.min(len1, len2);
-        int numPhonemesToCompare = Math.min(5, minPhonemes);
+        int numPhonemesToCompare = Math.min(3, minPhonemes);
         for (int i = 0; i < numPhonemesToCompare; i++) {
             String phoneme1 = word1Phonemes[len1 - 1 - i];
             String phoneme2 = word2Phonemes[len2 - 1 - i];

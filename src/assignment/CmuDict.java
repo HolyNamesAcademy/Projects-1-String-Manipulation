@@ -5,9 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * The representation of the CMU pronunciation dictionary.
- */
+/** The representation of the CMU pronunciation dictionary. */
 public class CmuDict {
     private static ArrayList<String> dictLines;
 
@@ -32,7 +30,8 @@ public class CmuDict {
      * @param dictLine
      * @return true if the given line contains a word entry, false otherwise
      */
-    private boolean isWordEntry(String dictLine) {
+    public boolean isWordEntry(String dictLine) {
+        // TODO: implement this
         return false;
     }
 
@@ -42,6 +41,7 @@ public class CmuDict {
      * @return the word part of dictLine
      */
     public static String getWord(String dictLine) {
+        // TODO: implement this
         return null;
     }
 
@@ -51,6 +51,7 @@ public class CmuDict {
      * @return an array containing the phonemes of the word in order.
      */
     public static String[] getPhonemes(String dictLine) {
+        // TODO: implement this
         return null;
     }
 
@@ -61,6 +62,7 @@ public class CmuDict {
      * @return The line from dictLines which corresponds to word. If none is found, return the empty string.
      */
     public String getDictLineForWord(String word) {
+        // TODO: implement this
         return null;
     }
 

@@ -2,9 +2,7 @@ package assignment;
 
 import java.util.ArrayList;
 
-/**
- * Util class for finding rhyming words in CmuDict.
- */
+/** Helper class for finding rhyming words in CmuDict. */
 public class WordRhymer {
 
     /**
@@ -14,16 +12,18 @@ public class WordRhymer {
      * @return A list containing words that rhyme with wordToRhyme. It should have at most numRhymingWords words in it.
      */
     public ArrayList<String> findRhymingWords(String wordToRhyme, int numRhymingWords) {
+        // TODO: implement this
         return null;
     }
 
     /**
-     * Determine whether two sets of phonemes have the same final few phonemes.
+     * Determine whether two sets of phonemes have the same final 3 phonemes.
      * @param word1Phonemes the phonemes for the first word
      * @param word2Phonemes the phonemes for the second word
-     * @return whether the two sets of phonemes match at their last few (3).
+     * @return whether the two sets of phonemes match at their last 3 phonemes.
      */
     public static boolean finalPhonemesMatch(String[] word1Phonemes, String[] word2Phonemes) {
+        // TODO: implement this
         return false;
     }
 }
