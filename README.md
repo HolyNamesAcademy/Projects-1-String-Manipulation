@@ -1,6 +1,31 @@
 # Project 4: String Manipulation
 
-## Overview
+## Good work pledge
+
+We are here to broaden your exposure to Computer Science. We can only achieve that purpose when you work hard and
+honestly. It may be tempting to copy-paste code from a classmate, or let a classmate do all your work for you don't!
+You will be cheating yourself from the most valuable thing course has to offer overcoming challenges.
+
+We know that hard, and honest work doesn't come easily. If you feel like you are falling behind
+
+   1. Don't copy-paste code, or let someone do your work for you
+   2. Ask for help!
+   3. Tell the teaching-team you need more time
+
+## Getting started
+
+1. Go to the provided assignment link, and click accept. It should take you to your project page. (If it doesn't, click
+   on the link above again, and click on the link to the project page).
+2. On the GitHub project page, click on the green "Clone or Download" button and copy the link.
+3. Open Intellij, click on the "Checkout from Version Control" drop down and select "GitHub"
+4. On the next page paste the link you copied into the "Git Repository URL" box.
+5. Click Clone. You may have to enter your GitHub username and password.
+6. If it asks you whether you want to open the project or not, select yes.
+7. You should see your project open. If you need to reopen the project, you should see it under "File > Open Recent"
+8. If you click on the drop-down menu of run configurations, you should see "Main", "CmuDictTest", and "WordRhymerTest"
+   as options. You should be able to run all of them. If any of the configurations are missing, call an instructor over.
+
+## Project Overview
 
 In this project, you will use string manipulation techniques to find rhyming words in CMUDict, a dictionary that
 contains information about the pronunciation of words in North American English.
@@ -223,3 +248,34 @@ CMUDict has a lot of words in it, but it's certainly not a complete representati
 if you try to rhyme words that aren't in there, like "pokemon" or "spongebob", you'll come up empty-handed. If you can't
 find any words for the original word you supplied, try to improve your search by finding a word that is similar to that
 word and finding rhyming words for the similar word.
+
+## Turning In The Project
+
+Follow the guidelines in the IntelliJ Setup page to turn in your assignment.
+
+## Grading Rubric
+
+<h3>CmuDict</h3> | <h3>20 points</h3>
+:--- | ---:
+isWordEntry() | 5 points
+getWord() | 5 points
+getPhonemes() | 5 points
+getDictLineForWord() | 5 points
+<h3>WordRhymer</h3> | <h3>20 points</h3>
+finalPhonemesMatch() | 5 points
+findRhymingWords() | 15 points
+<h3>CmuDictTest (5 points per test)</h3> | <h3>30 points</h3>
+<h3>WordRhymerTest (5 points per test)</h3> | <h3>20 points</h3>
+<h3>Code Quality</h3> | <h3>20 points</h3>
+No compile errors | 10 pts
+[Code spaced and indented properly](https://stackoverflow.com/questions/17879475/how-enable-auto-format-code-for-intellij-idea) | 10 pts
+[Descriptive variable names](http://www.makinggoodsoftware.com/2009/05/04/71-tips-for-naming-variables) | 5 pts
+<h3>Administrative</h3> | <h3>20 pts</h3>
+Correctly pushed to GitHub | 5 pts
+Turned in on time | 15 pts
+<h3>Extra Credit</h3> | <h3>20 points</h3>
+Handling bogus input in CmuDict methods | 5 points
+Making CmuDict more efficient | 5 points
+Improving the rhyming algorithm | 5 points
+Rhyme words that aren't in the dictionary | 5 points
+<h3>Total</h3> (not including extra credit) | <h3>130 pts</h3>
