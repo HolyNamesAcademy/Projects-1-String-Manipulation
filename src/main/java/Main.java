@@ -1,5 +1,3 @@
-package rhymingwords;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
