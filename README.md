@@ -1,5 +1,25 @@
 # Project 4: String Manipulation
 
+## Table of Contents
+- [Good work pledge](#good-work-pledge)
+- [Getting started](#getting-started)
+- [Project overview](#project-overview)
+- [Program contents](#program-contents)
+   - [Application classes](#application-classes)
+      - [Main](#main)
+      - [CmuDict](#cmudict)
+      - [WordRhymer](#wordrhymer)
+   - [Test classes](#test-classes)
+      - [CmuDictTest](#cmudicttest)
+      - [WordRhymerTest](#wordrhymertest)
+- [Extra credit](#extra-credit)
+   - [Make the CmuDict methods robust to bogus input](#make-the-cmudict-methods-robust-to-bogus-input)
+   - [Make CmuDict more efficient](#make-cmudict-more-efficient)
+   - [Improve the rhyming algorithm](#improve-the-rhyming-algorithm)
+   - [Rhyme words that aren't in the dictionary](#rhyme-words-that-arent-in-the-dictionary)
+- [Turning in the project](#turning-in-the-project)
+- [Grading rubric](#grading-rubric)
+
 ## Good work pledge
 
 We are here to broaden your exposure to Computer Science. We can only achieve that purpose when you work hard and
@@ -25,7 +45,7 @@ We know that hard, and honest work doesn't come easily. If you feel like you are
 8. If you click on the drop-down menu of run configurations, you should see "Main", "CmuDictTest", and "WordRhymerTest"
    as options. You should be able to run all of them. If any of the configurations are missing, call an instructor over.
 
-## Project Overview
+## Project overview
 
 In this project, you will use string manipulation techniques to find rhyming words in CMUDict, a dictionary that
 contains information about the pronunciation of words in North American English.
@@ -109,13 +129,13 @@ Therefore, we can conclude that words definitely rhyme when the following are tr
 
 For more information about CMUDict, check out http://www.speech.cs.cmu.edu/cgi-bin/cmudict.
 
-## Program Contents
+## Program contents
 
 The program contains two packages: *rhymingwords* and *test*. The *rhymingwords* package contains three application
 classes: `CmuDict`, `WordRhymer`, and `Main`. The *test* package contains two test classes: `CmuDictTest` and
 `WordRhymerTest`. You will make changes to `CmuDict`, `WordRhymer`, `CmuDictTest`, and `WordRhymerTest`.
 
-### Application Classes
+### Application classes
 
 These classes contain the code for the word rhyming application you'll be writing. To run the program, select the "Main"
 run configuration at the top right corner of the screen and click the green triangle (the "run" button) to the right.
@@ -130,11 +150,11 @@ it will repeat everything in a loop until the user decides to quit the program b
 
 #### CmuDict
 
-The `CmuDict` class provides access to and helper methods for *cmudict.0.7.a*, the text file containing CMUDict.
-The dictionary entries are read into an `ArrayList<String>` in the constructor. Each item in the list should correspond
-to a valid entry in the dictionary containing a word and its phonemes. A valid entry is a line containing the word,
-followed by two spaces, then the phonemes, each separated by a single space. See again the entry for "academy":
-`ACADEMY  AH0 K AE1 D AH0 M IY0`
+The `CmuDict` class provides access to and helper methods for *cmudict.0.7.a*, the text file containing version 0.7a
+(from 2008) of CMUDict. The dictionary entries are read into an `ArrayList<String>` in the constructor. Each item in the
+list should correspond to a valid entry in the dictionary containing a word and its phonemes. A valid entry is a line
+containing the word, followed by two spaces, then the phonemes, each separated by a single space. See again the entry
+for "academy": `ACADEMY  AH0 K AE1 D AH0 M IY0`
 
 You'll need to implement the following methods in the CmuDict class:
 * `boolean isWordEntry(String line)`: This is the method we use when reading in the lines of the text file containing
@@ -169,7 +189,7 @@ You'll need to implement the following methods in the WordRhymer class:
   `findRhymingWords("academy", 3)`, you could return ["ALCHEMY", "ANATOMY", "ANOMIE"]. NOTE: make sure that you do not
    include the word itself as a rhyming word in the list you return.
 
-### Test Classes
+### Test classes
 
 These classes contain the test code for classes defined in the *rhymingwords* package. Each of the two classes has its
 own run configuration. To run the tests for a given test class, select the corresponding configuration at the top right
@@ -249,11 +269,11 @@ if you try to rhyme words that aren't in there, like "pokemon" or "spongebob", y
 find any words for the original word you supplied, try to improve your search by finding a word that is similar to that
 word and finding rhyming words for the similar word.
 
-## Turning In The Project
+## Turning in the project
 
 Follow the guidelines in the IntelliJ Setup page to turn in your assignment.
 
-## Grading Rubric
+## Grading rubric
 
 | <h3>CmuDict</h3> | <h3>20 pts</h3> |
 | :------------- | -----: |

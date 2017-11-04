@@ -10,10 +10,17 @@ public class CmuDict {
     private static ArrayList<String> dictLines;
 
     public CmuDict() {
+        // Initialize our dictionary as an empty list
         dictLines = new ArrayList();
+        // Create a File object for the cmudict.0.7a.txt file in the project.
         File f = new File("cmudict.0.7a.txt");
+        // When we put code inside a try{} block, it means we're watching out in case something goes wrong and the
+        // program throws an exception.
         try {
+            // We're creating a Scanner object, but this time instead of reading user input from System.in, it's going
+            // to read input from the file.
             Scanner scanner = new Scanner(f);
+            // Loop through the lines in the file and add the actual word entries to dictLines.
             while (scanner.hasNext()) {
                 String line = scanner.nextLine().trim();
                 if (isWordEntry(line)) {
@@ -21,7 +28,13 @@ public class CmuDict {
                 }
             }
         } catch (FileNotFoundException e) {
-            System.out.println(e);
+            // If anything in the try{} block causes a FileNotFound exception to be thrown, we end up here. If throwing
+            // an exception is not the end of the world for our program, then we could do some error handling and just
+            // return. Unfortunately, not being able to open the cmudict.0.7a.txt file means we have no dictionary
+            // lines, so any further computation we do is going to be garbage. As such, the best thing we can do is to
+            // print the stack trace and terminate the program with status code 1 (error).
+            e.printStackTrace(System.err);
+            System.exit(1);
         }
     }
 

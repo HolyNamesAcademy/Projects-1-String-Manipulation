@@ -2,6 +2,8 @@ package test;
 
 import org.junit.Test;
 
+import static org.junit.Assert.*;
+
 public class CmuDictTest {
 
     /* Check that the method returns true for input that is a valid dictionary line */

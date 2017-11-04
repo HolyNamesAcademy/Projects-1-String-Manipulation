@@ -2,6 +2,8 @@ package test;
 
 import org.junit.Test;
 
+import static org.junit.Assert.*;
+
 public class WordRhymerTest {
 
     /* Test two arrays of phonemes that do share the last 3 phonemes */
