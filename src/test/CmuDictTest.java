@@ -24,6 +24,13 @@ public class CmuDictTest {
         // TODO: implement this
     }
 
+    /* Check that when a line contains a word with an alternate pronunciation, (e.g. it ends with "(1)"), we only
+       extract the word. */
+    @Test
+    public void testGetWord_AlternatePronunciation() {
+        // TODO: implement this
+    }
+
     /* Check that we don't extract a word from an invalid dictionary line */
     @Test
     public void testGetWord_InvalidLine() {

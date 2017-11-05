@@ -123,7 +123,18 @@ sound. Say it to yourself and feel the difference in how you pronounce each word
 that even though all three words end with the same overall sound, "academy" and "empty" rhyme with each other more
 strongly than they do with "tea".
 
-Therefore, we can conclude that words definitely rhyme when the following are true:
+Additionally, you may notice that some words have multiple entries. For example, consider the entries for "jewelry":
+```
+JEWELRY  JH UW1 AH0 L R IY0
+JEWELRY(1)  JH UW1 L R IY0
+JEWELRY(2)  JH UW1 L ER0 IY0
+```
+This means that there are three different ways someone might pronounce the word "jewelry". But they're all still
+the same word. So even though the first two pronunciations of "jewelry" have the same final phonemes, it would be on the
+pedantic side to say that "jewlery" and "jewelry" are rhyming words.
+
+Therefore, **for this project**, we can conclude that words definitely rhyme when the following are true:
+* The words themselves are different from each other
 * The words have the same final phonemes in the same order
 * The phonemes that match also have the same stress markers
 
@@ -206,6 +217,8 @@ You'll write your tests for the `CmuDict` class here. You'll need to implement t
 * `getWord(String dictLine)`
 
    * Check that we correctly extract the word when `dictLine` is a valid dictionary line
+   * Check that we correctly extract the word when `dictLine` is a valid dictionary line containing an alternate
+     pronunciation, so that we strip off the final parentheses
 
 * `getPhonemes(String dictLine)`
 
@@ -284,7 +297,7 @@ Follow the guidelines in the IntelliJ Setup page to turn in your assignment.
 | <h3>WordRhymer</h3> | <h3>20 pts</h3> |
 | finalPhonemesMatch() | 5 pts |
 | findRhymingWords() | 15 pts |
-| <h3>CmuDictTest (5 points per test)</h3> | <h3>30 pts</h3> |
+| <h3>CmuDictTest (5 points per test)</h3> | <h3>35 pts</h3> |
 | <h3>WordRhymerTest (5 points per test)</h3> | <h3>20 pts</h3> |
 | <h3>Code Quality</h3> | <h3>20 pts</h3> |
 | No compile errors | 10 pts |
@@ -298,4 +311,4 @@ Follow the guidelines in the IntelliJ Setup page to turn in your assignment.
 | Making CmuDict more efficient | 5 pts |
 | Improving the rhyming algorithm | 5 pts |
 | Rhyme words that aren't in the dictionary | 5 pts |
-| <h3>Total</h3> (not including extra credit) | <h3>130 pts</h3> |
+| <h3>Total</h3> (not including extra credit) | <h3>135 pts</h3> |
