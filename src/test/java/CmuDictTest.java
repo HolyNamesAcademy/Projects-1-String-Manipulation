@@ -30,6 +30,7 @@ public class CmuDictTest {
     @Test
     public void testGetWord_AlternatePronunciation() {
         // TODO: implement this
+        assertTrue(false);
     }
 
     /* Check that we don't extract a word from an invalid dictionary line */
