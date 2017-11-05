@@ -43,7 +43,7 @@ public class CmuDict {
      * @param dictLine
      * @return true if the given line contains a word entry, false otherwise
      */
-    public boolean isWordEntry(String dictLine) {
+    public static boolean isWordEntry(String dictLine) {
         // TODO: implement this
         return false;
     }
