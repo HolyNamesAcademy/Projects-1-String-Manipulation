@@ -8,12 +8,14 @@ public class WordRhymerTest {
     @Test
     public void testFinalPhonemesMatch_SameLast3Phonemes() {
         // TODO: implement this
+        assertTrue(false);
     }
 
     /* Test two arrays of phonemes that do not share the same last 3 phonemes */
     @Test
     public void testFinalPhonemesMatch_MismatchedFinalPhonemes() {
         // TODO: implement this
+        assertTrue(false);
     }
 
     /* Test two arrays of phonemes where at least one of them has fewer than 3 phonemes, but the final few phonemes do
@@ -21,6 +23,7 @@ public class WordRhymerTest {
     @Test
     public void testFinalPhonemesMatch_FewerThan3PhonemesButStillMatches() {
         // TODO: implement this
+        assertTrue(false);
     }
 
     /* Test two arrays of phonemes where at least one of them has fewer than 3 phonemes, but the final few phonemes do
@@ -28,5 +31,6 @@ public class WordRhymerTest {
     @Test
     public void testFinalPhonemesMatch_FewerThan3PhonemesButNoMatch() {
         // TODO: implement this
+        assertTrue(false);
     }
 }
