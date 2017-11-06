@@ -1,5 +1,3 @@
-package rhymingwords;
-
 import java.util.ArrayList;
 
 /** Helper class for finding rhyming words in CmuDict. */
