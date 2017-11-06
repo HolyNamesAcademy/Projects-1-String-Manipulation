@@ -142,7 +142,7 @@ For more information about CMUDict, check out http://www.speech.cs.cmu.edu/cgi-b
 
 ## Program contents
 
-The program contains two packages: *rhymingwords* and *test*. The *rhymingwords* package contains three application
+The program contains two packages: *main* and *test*. The *main* package contains three application
 classes: `CmuDict`, `WordRhymer`, and `Main`. The *test* package contains two test classes: `CmuDictTest` and
 `WordRhymerTest`. You will make changes to `CmuDict`, `WordRhymer`, `CmuDictTest`, and `WordRhymerTest`.
 
