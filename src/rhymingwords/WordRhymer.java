@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 /** Helper class for finding rhyming words in CmuDict. */
 public class WordRhymer {
+    // Keep a CmuDict object as a member variable for use in WordRhymer's methods.
+    private CmuDict cmuDict = new CmuDict();
 
     /**
      * Generate a list of words that rhyme with wordToRhyme
