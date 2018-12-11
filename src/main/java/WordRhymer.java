@@ -13,7 +13,7 @@ public class WordRhymer {
      */
     public ArrayList<String> findRhymingWords(String wordToRhyme, int numRhymingWords) {
         // TODO: implement this
-        return null;
+        return new ArrayList<>();
     }
 
     /**
