@@ -1,31 +1,34 @@
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-
         Scanner in = new Scanner(System.in);
-        WordRhymer wordRhymer = new WordRhymer();
+        RhymeGenerator rhymeGenerator = new RhymeGenerator();
 
         System.out.print("Enter a command (\"quit\" or \"rhyme\"): ");
         String command = in.nextLine().toLowerCase();
 
-        //Continue to rhyme unless the user asks to quit
         while (!command.equals("quit")) {
             if (!command.equals("rhyme")) {
-                // The user entered something that was not "quit" or "rhyme".
                 System.out.println("Command not recognized.");
             } else {
-                System.out.println("Which word would you like to rhyme?");
+                System.out.print("Which word would you like to rhyme? ");
                 String wordToRhyme = in.nextLine();
 
-                System.out.println("How many rhyming words would you like to find?");
+                //Make sure they entered a word.
+                while (wordToRhyme.trim().equals("")) {
+                    System.out.print("Please enter a word to rhyme. Try again: ");
+                    wordToRhyme = in.nextLine();
+                }
+
+                System.out.print("How many rhyming words would you like to find? ");
                 int numRhymingWords = in.nextInt();
 
-                // Make sure the number of rhyming words to find is positive.
+                // Make sure the number of words to find is positive.
                 while (numRhymingWords < 1) {
-                    System.out.println("Please enter a positive number");
+                    System.out.print("Please enter a positive number");
                     numRhymingWords = in.nextInt();
                 }
 
@@ -35,20 +38,25 @@ public class Main {
                 // print future output on the next line.
                 in.nextLine();
 
-                ArrayList<String> rhymingWords = wordRhymer.findRhymingWords(wordToRhyme, numRhymingWords);
+                List<String> rhymingWords = rhymeGenerator.findRhymingWords(wordToRhyme.trim(), numRhymingWords);
+
                 if (rhymingWords.isEmpty()) {
                     System.out.println("Found no words that rhymed with " + wordToRhyme);
                 } else {
-                    System.out.println("Found "+ rhymingWords.size() + " words that rhymed with " + wordToRhyme + ":");
-                    for (String word : rhymingWords) {
-                        System.out.println(word);
-                    }
+                    printRhymes(rhymingWords, wordToRhyme);
                 }
             }
-
-            // Does the user want to rhyme again?
+            // Ask the user again what they want to do and reads their response.
             System.out.print("Enter a command (\"quit\" or \"rhyme\"): ");
             command = in.nextLine().toLowerCase();
+        }
+    }
+
+    public static void printRhymes(List<String> rhymingWords, String originalWord){
+        System.out.format("Found %d words that rhyme with: %s", rhymingWords.size(), originalWord);
+        System.out.println();
+        for (String word : rhymingWords) {
+            System.out.println(word.charAt(0) + word.substring(1).toLowerCase());
         }
     }
 }
