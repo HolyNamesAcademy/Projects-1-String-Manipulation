@@ -5,13 +5,15 @@ import org.junit.Test;
  */
 public class WordRhymerTest {
 
+    private WordRhymer wordRhymer = new WordRhymer();
+
     @Test
-    public void checkForRhyme_rhymes_bothWordsMoreThanThreePhonemes() {
+    public void checkForRhyme_rhymes_bothWordsThreeOrMorePhonemes() {
 
     }
 
     @Test
-    public void checkForRhyme_notRhymes_bothWordsMoreThanThreePhonemes() {
+    public void checkForRhyme_notRhymes_bothWordsThreeOrMorePhonemes() {
 
     }
 
