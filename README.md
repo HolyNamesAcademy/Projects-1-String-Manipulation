@@ -1,25 +1,5 @@
 # Project 4: String Manipulation
 
-## Table of Contents
-- [Good work pledge](#good-work-pledge)
-- [Getting started](#getting-started)
-- [Project overview](#project-overview)
-- [Program contents](#program-contents)
-   - [Application classes](#application-classes)
-      - [Main](#main)
-      - [CmuDict](#cmudict)
-      - [WordRhymer](#wordrhymer)
-   - [Test classes](#test-classes)
-      - [CmuDictTest](#cmudicttest)
-      - [WordRhymerTest](#wordrhymertest)
-- [Extra credit](#extra-credit)
-   - [Make the CmuDict methods robust to bogus input](#make-the-cmudict-methods-robust-to-bogus-input)
-   - [Make CmuDict more efficient](#make-cmudict-more-efficient)
-   - [Improve the rhyming algorithm](#improve-the-rhyming-algorithm)
-   - [Rhyme words that aren't in the dictionary](#rhyme-words-that-arent-in-the-dictionary)
-- [Turning in the project](#turning-in-the-project)
-- [Grading rubric](#grading-rubric)
-
 ## Good work pledge
 
 We are here to broaden your exposure to Computer Science. We can only achieve that purpose when you work hard and
