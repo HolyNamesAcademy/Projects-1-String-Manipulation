@@ -41,22 +41,24 @@ public class Main {
                 List<String> rhymingWords = rhymeGenerator.findRhymingWords(wordToRhyme.trim(), numRhymingWords);
 
                 if (rhymingWords.isEmpty()) {
-                    System.out.println("Found no words that rhymed with " + wordToRhyme);
+                    System.out.println(String.format("Could not find words that rhyme with: %s.", wordToRhyme));
                 } else {
                     printRhymes(rhymingWords, wordToRhyme);
                 }
             }
             // Ask the user again what they want to do and reads their response.
+            System.out.println();
             System.out.print("Enter a command (\"quit\" or \"rhyme\"): ");
             command = in.nextLine().toLowerCase();
         }
     }
 
+    /**
+     * ADDDDDDD COMMENTS
+     * @param rhymingWords
+     * @param originalWord
+     */
     public static void printRhymes(List<String> rhymingWords, String originalWord){
-        System.out.format("Found %d words that rhyme with: %s", rhymingWords.size(), originalWord);
-        System.out.println();
-        for (String word : rhymingWords) {
-            System.out.println(word.charAt(0) + word.substring(1).toLowerCase());
-        }
+        //TODO - implement me!
     }
 }

@@ -25,27 +25,7 @@ public class WordRhymer {
      * @return true if possibleRhyme is a rhyme with word as determined by the phoneme matching rule noted above
      */
     public boolean checkForRhyme(String word, String possibleRhyme) {
-
-        List<String> wordPhonemes = phonemeDictionary.getPhonemes(word);
-        List<String> possibleRhymePhonemes = phonemeDictionary.getPhonemes(possibleRhyme);
-
-        int size1 = wordPhonemes.size();
-        int size2 = possibleRhymePhonemes.size();
-
-        if(size1 == 0 || size2 == 0) {
-            return false;
-        }
-
-        int maxComps = Math.min(3, size1);
-
-        while(size1 > 0 && size2 > 0 && maxComps > 0){
-            if(!wordPhonemes.get(size1 - 1).equalsIgnoreCase(possibleRhymePhonemes.get(size2 - 1)))
-                return false;
-            size1--;
-            size2--;
-            maxComps--;
-        }
-
-        return true;
+        //TODO - implement me!
+        return false;
     }
 }

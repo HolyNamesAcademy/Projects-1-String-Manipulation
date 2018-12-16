@@ -17,18 +17,6 @@ public class RhymeGenerator {
     public List<String> findRhymingWords(String wordToRhyme, int numRhymingWords) {
         ArrayList<String> rhymes = new ArrayList<>();
 
-        List<String> possibleRhymes = rhymer.getAllPossibleRhymes();
-        for(String rhyme : possibleRhymes){
-            if(!wordToRhyme.equalsIgnoreCase(rhyme) && rhymer.checkForRhyme(wordToRhyme, rhyme)){
-                if (rhymes.size() == numRhymingWords){
-                    break;
-                }
-                else{
-                    rhymes.add(rhyme);
-                }
-            }
-        }
-
         return rhymes;
     }
 
