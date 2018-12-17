@@ -12,29 +12,33 @@ public class PhonemeDictionaryTest {
     public void getEntries() {
         List<String> allPhonemeEntries = phonemeDictionary.getEntries();
 
-        assertTrue(allPhonemeEntries.size() == 12);
+        assertTrue("The test dictionary has 12 phoneme entries. Expected 12 entries.", allPhonemeEntries.size() == 12);
         for(String entry : phonemeDictionary.getEntries()){
-            assertFalse(entry.contains(";;;"));
+            assertFalse("An entry contains ';;;'. A comment has been included in the dictionary.",
+                entry.contains(";;;"));
         }
     }
 
     @Test
     public void getPhonemes_phonemesExist_caseDoesNotMatch() {
         List<String> phonemesForIce = phonemeDictionary.getPhonemes("Ice");
-        assertFalse(phonemesForIce.isEmpty());
-        assertTrue(phonemesForIce.size() == 2);
+
+        assertFalse("Expected to find phonemes for Ice. None found.", phonemesForIce.isEmpty());
+        assertTrue("Expected 2 phonemes. Found " + phonemesForIce.size(), phonemesForIce.size() == 2);
     }
 
     @Test
     public void getPhonemes_phonemesExist_caseDoesMatch() {
         List<String> phonemesForIce = phonemeDictionary.getPhonemes("ICE");
-        assertFalse(phonemesForIce.isEmpty());
-        assertTrue(phonemesForIce.size() == 2);
+
+        assertFalse("Expected to find phonemes for ICE. None found.", phonemesForIce.isEmpty());
+        assertTrue("Expected 2 phonemes. Found " + phonemesForIce.size(), phonemesForIce.size() == 2);
     }
 
     @Test
     public void getPhonemes_noPhonemesForWord() {
         List<String> phonemesForIce = phonemeDictionary.getPhonemes("Bananas");
-        assertTrue(phonemesForIce.isEmpty());
+
+        assertTrue("Found phonemes for a word not in the dictionary file: Bananas", phonemesForIce.isEmpty());
     }
 }

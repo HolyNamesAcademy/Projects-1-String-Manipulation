@@ -15,7 +15,7 @@ public class RhymeGenerator {
      *         will be returned.
      */
     public List<String> findRhymingWords(String wordToRhyme, int numRhymingWords) {
-        ArrayList<String> rhymes = new ArrayList<>();
+        List<String> rhymes = new ArrayList<>();
 
         return rhymes;
     }
