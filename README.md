@@ -165,7 +165,7 @@ separated by a single space. Here is the entry for "academy": `ACADEMY  AH0 K AE
 In the resources folder you will find the dictionary file, *cmudict.0.7.a*. A second file has been included, 
 *miniCmuDict.txt* that is a mini version of *cmudict.0.7.a*. When developing, you may find it easier to work with a
 file with fewer words. You can switch between the files by changing the value of `DICTIONARY_FILE_PATH`, a constant in 
-the `PhonemeDictionary` class.
+the `PhonemeDictionary` class. Feel free to edit the *miniCmuDict.txt* to include additional words to make your testing easier.
 
 You'll need to implement the following methods in the `PhonemeDictionary` class:
 * `boolean isPhonemeEntry(String line)`: This is the method we use when reading in the lines of the text file containing
