@@ -11,6 +11,11 @@ public class WordRhymerTest {
     private WordRhymer wordRhymer = new WordRhymer();
 
     @Test
+    public void checkForRhyme_wordDoesNotRhymeWithSelf()  {
+        assertTrue(false);
+    }
+
+    @Test
     public void checkForRhyme_rhymes_bothWordsThreeOrMorePhonemes() {
         assertTrue(false);
     }

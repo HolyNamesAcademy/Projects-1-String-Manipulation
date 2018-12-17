@@ -220,25 +220,27 @@ and click the run button to the right.
 You'll write your tests for the `WordRhymer` class here. You'll need to implement the following test cases:
 * `boolean checkForRhyme(String word, String possibleRhyme)`
 
+   * `checkForRhyme_wordDoesNotRhymeWithSelf`:
+      checkForRhyme returns false when both words are the same
    * `checkForRhyme_rhymes_bothWordsThreeOrMorePhonemes`:
       checkForRhyme returns true when both words have three or more phonemes
-   * `checkForRhyme_notRhymes_bothWordsThreeOrMorePhonemes`
+   * `checkForRhyme_notRhymes_bothWordsThreeOrMorePhonemes`:
       checkForRhyme returns false when both words have three or more phonemes
-   * `checkForRhyme_rhymes_wordLessThanThreePhonemes`
+   * `checkForRhyme_rhymes_wordLessThanThreePhonemes`:
       checkForRhyme returns true when the word argument has less than three phonemes, and the possibleRhyme argument has
       three or more phonemes
-   * `checkForRhyme_notRhymes_wordLessThanThreePhonemes`
+   * `checkForRhyme_notRhymes_wordLessThanThreePhonemes`:
       checkForRhyme returns false when the word argument has less than three phonemes, and the possibleRhyme argument 
       has three or more phonemes
-   * `checkForRhyme_rhymes_possibleRhymeLessThanThreePhonemes`
+   * `checkForRhyme_rhymes_possibleRhymeLessThanThreePhonemes`:
       checkForRhyme returns true when the word argument has three or more phonemes, and the possibleRhyme argument has 
       less than three phonemes
-   * `checkForRhyme_notRhymes_possibleRhymeLessThanThreePhonemes`
+   * `checkForRhyme_notRhymes_possibleRhymeLessThanThreePhonemes`:
       checkForRhyme returns false when the word argument has three or more phonemes, and the possibleRhyme argument has 
       less than three phonemes
-   * `checkForRhyme_rhymes_bothLessThanThreePhonemes`
+   * `checkForRhyme_rhymes_bothLessThanThreePhonemes`:
       checkForRhyme returns true when both arguments have less than three phonemes
-   * `checkForRhyme_notRhymes_bothLessThanThreePhonemes`
+   * `checkForRhyme_notRhymes_bothLessThanThreePhonemes`:
       checkForRhyme returns false when both arguments have less than three phonemes
 
 ## Extra credit
