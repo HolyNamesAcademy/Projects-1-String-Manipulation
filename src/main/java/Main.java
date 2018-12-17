@@ -54,9 +54,15 @@ public class Main {
     }
 
     /**
-     * ADDDDDDD COMMENTS
-     * @param rhymingWords
-     * @param originalWord
+     * Print the rhyme report. If the word to rhyme with was 'educate' and the user asked for three rhyming words that
+     * were found to be: DOMESTICATE, PONTIFICATE, COMMUNICATE, it should look like this:
+     *    Found 3 words that rhyme with: educate
+     *    Domesticate
+     *    Pontificate
+     *    Communicate
+     *
+     * @param rhymingWords the list of rhyming words to display to the console
+     * @param originalWord the word the user asked to find rhymes for
      */
     public static void printRhymes(List<String> rhymingWords, String originalWord){
         //TODO - implement me!
