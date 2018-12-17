@@ -28,7 +28,7 @@ public class Main {
 
                 // Make sure the number of words to find is positive.
                 while (numRhymingWords < 1) {
-                    System.out.print("Please enter a positive number");
+                    System.out.print("Please enter a positive number. Try again: ");
                     numRhymingWords = in.nextInt();
                 }
 
@@ -61,8 +61,8 @@ public class Main {
      *    Pontificate
      *    Communicate
      *
-     * @param rhymingWords the list of rhyming words to display to the console
-     * @param originalWord the word the user asked to find rhymes for
+     * @param rhymingWords - the list of rhyming words to display to the console
+     * @param originalWord - the word the user asked to find rhymes for
      */
     public static void printRhymes(List<String> rhymingWords, String originalWord){
         //TODO - implement me!

@@ -17,11 +17,11 @@ public class WordRhymer {
     }
 
     /**
-     * Determine whether two words rhyme. A rhyme is determined by matching the final phonemes of the words.
+     * Determines whether two words rhyme. A rhyme is determined by matching the final phonemes of the words.
      * Two words will be considered rhymes if their final three phonemes match. If either word has fewer than three
-     * phonemes, all phonemes for the word with fewer than three phonemes must match the the end of the other word.
-     * @param word the phonemes for the word to be rhymed with
-     * @param possibleRhyme the phonemes for the word being considered a rhyme
+     * phonemes, all phonemes for the word with fewer than three phonemes must match at the end of the other word.
+     * @param word - the phonemes for the word to be rhymed with
+     * @param possibleRhyme - the phonemes for the word being considered a rhyme
      * @return true if possibleRhyme is a rhyme with word as determined by the phoneme matching rule noted above
      */
     public boolean checkForRhyme(String word, String possibleRhyme) {

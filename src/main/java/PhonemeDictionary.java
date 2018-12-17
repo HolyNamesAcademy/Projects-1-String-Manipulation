@@ -29,7 +29,6 @@ public class PhonemeDictionary {
      * @return the list of all words in our dictionary
      */
     public List<String> getEntries() {
-
         return new ArrayList<>(phonemeDictionary.keySet());
     }
 
@@ -45,7 +44,7 @@ public class PhonemeDictionary {
     /**
      * Checks that the provided line is an entry in the file that contains a word and phonemes, and that it is not a
      * line containing comments.
-     * @param line a line from the dictionary being parsed
+     * @param line - a line from the dictionary being parsed
      * @return true if the given line contains a word entry, false otherwise
      */
     private boolean isPhonemeEntry(String line) {
@@ -55,7 +54,7 @@ public class PhonemeDictionary {
 
     /**
      * Get the word component of a dictionary line. Lines are of the format: WORD PH1 PH2 PH3
-     * @param line the dictionary line we want to extract the word from
+     * @param line - the dictionary line we want to extract the word from
      * @return the word part of line
      */
     private String getWordFromLine(String line) {
@@ -65,7 +64,7 @@ public class PhonemeDictionary {
 
     /**
      * Get the phonemes component from a dictionary line. Lines are of the format: WORD PH1 PH2 PH3
-     * @param line the dictionary line we want to get the phonemes from
+     * @param line - the dictionary line we want to get the phonemes from
      * @return a list containing the phonemes of the word in order.
      */
     private List<String> getPhonemesFromLine(String line) {

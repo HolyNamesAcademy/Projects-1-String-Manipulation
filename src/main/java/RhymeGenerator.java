@@ -9,14 +9,14 @@ public class RhymeGenerator {
 
     /**
      * Generates a list up to numRhymingWords size of words that rhyme with wordToRhyme.
-     * @param wordToRhyme the word to find rhyming words for
-     * @param numRhymingWords the maximum number of rhyming words to find
+     * @param wordToRhyme - the word to find rhyming words for
+     * @param numRhymingWords - the maximum number of rhyming words to find
      * @return A list containing words that rhyme with wordToRhyme. If no rhyming words can be found and empty list
      *         will be returned.
      */
     public List<String> findRhymingWords(String wordToRhyme, int numRhymingWords) {
+        //TODO - implement me!
         List<String> rhymes = new ArrayList<>();
-
         return rhymes;
     }
 
