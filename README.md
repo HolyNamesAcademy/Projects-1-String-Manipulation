@@ -222,26 +222,29 @@ You'll write your tests for the `WordRhymer` class here. You'll need to implemen
 
    * `checkForRhyme_wordDoesNotRhymeWithSelf`:
       checkForRhyme returns false when both words are the same
+      Ex: anatomy & anatomy
    * `checkForRhyme_rhymes_bothWordsThreeOrMorePhonemes`:
       checkForRhyme returns true when both words have three or more phonemes
+      Ex: complicate & dedicate
    * `checkForRhyme_notRhymes_bothWordsThreeOrMorePhonemes`:
       checkForRhyme returns false when both words have three or more phonemes
+      Ex: littering & living
    * `checkForRhyme_rhymes_wordLessThanThreePhonemes`:
       checkForRhyme returns true when the word argument has less than three phonemes, and the possibleRhyme argument has
       three or more phonemes
+      Ex: at & cat
    * `checkForRhyme_notRhymes_wordLessThanThreePhonemes`:
       checkForRhyme returns false when the word argument has less than three phonemes, and the possibleRhyme argument 
       has three or more phonemes
+      Ex: at & banana
    * `checkForRhyme_rhymes_possibleRhymeLessThanThreePhonemes`:
       checkForRhyme returns true when the word argument has three or more phonemes, and the possibleRhyme argument has 
       less than three phonemes
+      Ex: knit & it 
    * `checkForRhyme_notRhymes_possibleRhymeLessThanThreePhonemes`:
       checkForRhyme returns false when the word argument has three or more phonemes, and the possibleRhyme argument has 
       less than three phonemes
-   * `checkForRhyme_rhymes_bothLessThanThreePhonemes`:
-      checkForRhyme returns true when both arguments have less than three phonemes
-   * `checkForRhyme_notRhymes_bothLessThanThreePhonemes`:
-      checkForRhyme returns false when both arguments have less than three phonemes
+      Ex: crab & it
 
 ## Extra credit
 
