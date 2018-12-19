@@ -51,17 +51,4 @@ public class WordRhymerTest {
         //TODO - implement me!
         assertTrue(false);
     }
-
-    @Test
-    public void checkForRhyme_rhymes_bothLessThanThreePhonemes() {
-        //TODO - implement me!
-        assertTrue(false);
-    }
-
-    @Test
-    public void checkForRhyme_notRhymes_bothLessThanThreePhonemes() {
-        //TODO - implement me!
-        assertTrue(false);
-    }
-
 }
