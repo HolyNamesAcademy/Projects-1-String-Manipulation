@@ -1,36 +1,54 @@
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
+/**
+ * Test class for WhordRhymer
+ */
 public class WordRhymerTest {
 
-    /* Test two arrays of phonemes that do share the last 3 phonemes */
+    private WordRhymer wordRhymer = new WordRhymer();
+
     @Test
-    public void testFinalPhonemesMatch_SameLast3Phonemes() {
-        // TODO: implement this
+    public void checkForRhyme_wordDoesNotRhymeWithSelf()  {
+        //TODO - implement me!
         assertTrue(false);
     }
 
-    /* Test two arrays of phonemes that do not share the same last 3 phonemes */
     @Test
-    public void testFinalPhonemesMatch_MismatchedFinalPhonemes() {
-        // TODO: implement this
+    public void checkForRhyme_rhymes_bothWordsThreeOrMorePhonemes() {
+        //TODO - implement me!
         assertTrue(false);
     }
 
-    /* Test two arrays of phonemes where at least one of them has fewer than 3 phonemes, but the final few phonemes do
-     * match */
     @Test
-    public void testFinalPhonemesMatch_FewerThan3PhonemesButStillMatches() {
-        // TODO: implement this
+    public void checkForRhyme_notRhymes_bothWordsThreeOrMorePhonemes() {
+        //TODO - implement me!
         assertTrue(false);
     }
 
-    /* Test two arrays of phonemes where at least one of them has fewer than 3 phonemes, but the final few phonemes do
-     * not match */
     @Test
-    public void testFinalPhonemesMatch_FewerThan3PhonemesButNoMatch() {
-        // TODO: implement this
+    public void checkForRhyme_rhymes_wordLessThanThreePhonemes() {
+        //TODO - implement me!
+        assertTrue(false);
+    }
+
+    @Test
+    public void checkForRhyme_notRhymes_wordLessThanThreePhonemes() {
+        //TODO - implement me!
+        assertTrue(false);
+    }
+
+    @Test
+    public void checkForRhyme_rhymes_possibleRhymeLessThanThreePhonemes() {
+        //TODO - implement me!
+        assertTrue(false);
+    }
+
+    @Test
+    public void checkForRhyme_notRhymes_possibleRhymeLessThanThreePhonemes() {
+        //TODO - implement me!
         assertTrue(false);
     }
 }

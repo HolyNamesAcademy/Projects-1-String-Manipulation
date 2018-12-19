@@ -1,29 +1,31 @@
-import java.util.ArrayList;
+import java.util.List;
 
-/** Helper class for finding rhyming words in CmuDict. */
+/**
+ * Class that provides users with words that are eligible to be rhymes, and also checks whether words rhyme.
+ * Rhymes are based on the matching of the words final phonemes.
+ */
 public class WordRhymer {
-    // Keep a CmuDict object as a member variable for use in WordRhymer's methods.
-    private CmuDict cmuDict = new CmuDict();
+
+    private PhonemeDictionary phonemeDictionary = PhonemeDictionary.getDictionary();
 
     /**
-     * Generate a list of words that rhyme with wordToRhyme
-     * @param wordToRhyme the word we want to find rhyming words for
-     * @param numRhymingWords the maximum number of rhyming words we want to find
-     * @return A list containing words that rhyme with wordToRhyme. It should have at most numRhymingWords words in it.
+     * Returns the list of all words that are available for rhyming.
+     * @return the list of all possible rhymes
      */
-    public ArrayList<String> findRhymingWords(String wordToRhyme, int numRhymingWords) {
-        // TODO: implement this
-        return null;
+    public List<String> getAllPossibleRhymes() {
+        return phonemeDictionary.getEntries();
     }
 
     /**
-     * Determine whether two sets of phonemes have the same final 3 phonemes.
-     * @param word1Phonemes the phonemes for the first word
-     * @param word2Phonemes the phonemes for the second word
-     * @return whether the two sets of phonemes match at their last 3 phonemes.
+     * Determines whether two words rhyme. A rhyme is determined by matching the final phonemes of the words.
+     * Two words will be considered rhymes if their final three phonemes match. If either word has fewer than three
+     * phonemes, all phonemes for the word with fewer than three phonemes must match at the end of the other word.
+     * @param word - the phonemes for the word to be rhymed with
+     * @param possibleRhyme - the phonemes for the word being considered a rhyme
+     * @return true if possibleRhyme is a rhyme with word as determined by the phoneme matching rule noted above
      */
-    public static boolean finalPhonemesMatch(String[] word1Phonemes, String[] word2Phonemes) {
-        // TODO: implement this
+    public boolean checkForRhyme(String word, String possibleRhyme) {
+        //TODO - implement me!
         return false;
     }
 }
