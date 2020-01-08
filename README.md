@@ -1,4 +1,4 @@
-# Project 4: String Manipulation
+# Project: String Manipulation
 
 ## Good work pledge
 
@@ -14,7 +14,7 @@ We know that hard, and honest work doesn't come easily. If you feel like you are
 
 ## Getting started
 
-1. Go to this link: [https://classroom.github.com/a/l2ZZJcpn](https://classroom.github.com/a/l2ZZJcpn) and click accept. It should take you to your project page. (If it doesn't, click
+1. Go to this link: [https://classroom.github.com/a/Z8mVNW-A](https://classroom.github.com/a/Z8mVNW-A) and click accept. It should take you to your project page. (If it doesn't, click
    on the link above again, and click on the link to the project page).
 2. On the GitHub project page, click on the green "Clone or Download" button and copy the link.
 3. Open Intellij, click on the "Checkout from Version Control" drop down and select "GitHub"
