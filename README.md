@@ -14,21 +14,21 @@ We know that hard, and honest work doesn't come easily. If you feel like you are
 
 ## Getting started
 
-1. Go to this link: [https://classroom.github.com/a/Z8mVNW-A](https://classroom.github.com/a/Z8mVNW-A) and click accept. It should take you to your project page. (If it doesn't, click
-   on the link above again, and click on the link to the project page).
-2. On the GitHub project page, click on the green "Clone or Download" button and copy the link.
-3. Open Intellij, click on the "Checkout from Version Control" drop down and select "GitHub"
-4. On the next page paste the link you copied into the "Git Repository URL" box.
-5. Click Clone. You may have to enter your GitHub username and password.
-6. If it asks you whether you want to open the project or not, select yes.
-7. You should see your project open. If you need to reopen the project, you should see it under "File > Open Recent"
-8. If you click on the drop-down menu of run configurations, you should see "Main", "RhymeGeneratorTest",  
+1. Go to the provided assignment link, and click accept. It should take you to your project page.
+  (If it doesn't, click on the link above again, and click on the link to the project page).
+1. On the GitHub project page, click on the green "Clone or Download" button and copy the link.
+2. Open Intellij, click on the "Checkout from Version Control" drop down and select "GitHub"
+3. On the next page paste the link you copied into the "Git Repository URL" box.
+4. Click Clone. You may have to enter your GitHub username and password.
+5. If it asks you whether you want to open the project or not, select yes.
+6. You should see your project open. If you need to reopen the project, you should see it under "File > Open Recent"
+7. If you click on the drop-down menu of run configurations, you should see "Main", "RhymeGeneratorTest",
    "WordRhymerTest", and "PhonemeDictionaryTest" as options. You should be able to run all of them. If any of the
    configurations are missing, call an instructor over.
 
 ## Project overview
 
-In this project, you will use string manipulation techniques to find rhyming words with the help of CMUDict, a 
+In this project, you will use string manipulation techniques to find rhyming words with the help of CMUDict, a
 dictionary that contains information about the pronunciation of words in North American English.
 
 CMUDict is a pronunciation dictionary created at Carnegie Mellon University.  A lot of programs that support speech
@@ -125,7 +125,7 @@ For more information about CMUDict, check out http://www.speech.cs.cmu.edu/cgi-b
 
 The program contains two packages: *main* and *test*. The *main* package contains four application
 classes: `PhonemeDictionary`, `WordRhymer`, `RhymeGenerator`, and `Main`. The *test* package contains three test
-classes: `PhonemeDictionaryTest`, `WordRhymerTest`, `RhymeGeneratorTest`. You will make changes to `PhonemeDictionary`, 
+classes: `PhonemeDictionaryTest`, `WordRhymerTest`, `RhymeGeneratorTest`. You will make changes to `PhonemeDictionary`,
 `WordRhymer`, `RhymeGenerator`, `Main`, and `WordRhymerTest`.
 
 ### Application classes
@@ -135,49 +135,49 @@ run configuration at the top right corner of the screen and click the green tria
 
 #### Main
 
-The `Main` class serves as the user interface. In the `main()` method, the user is asked if they want to find rhyming 
+The `Main` class serves as the user interface. In the `main()` method, the user is asked if they want to find rhyming
 words or quit the program. If the user types "rhyme", they will be prompted first for a word they want to rhyme
-with, and then the number of rhyming words they want the program to find. Once the program has collected that 
-information from the user, it calls the `findRhymingWords()` method from the `RhymeGenerator` class to get the rhyming 
+with, and then the number of rhyming words they want the program to find. Once the program has collected that
+information from the user, it calls the `findRhymingWords()` method from the `RhymeGenerator` class to get the rhyming
 words. Finally, it prints the rhymes out to the console for the user to see. The user can continue to request rhymes, or
 quit the program by typing "quit" when asked if they want to quit or rhyme.
 
 You will implement one method in this class:
-* `void printRhymes(List<String> rhymingWords, String originalWord)`: This method should print out a report of how many 
+* `void printRhymes(List<String> rhymingWords, String originalWord)`: This method should print out a report of how many
    words were found that rhyme, and the rhymes. An example of what the output should look like:
-   
+
    Found 3 words that rhyme with: educate
    Domesticate
    Pontificate
    Communicate
-   
+
    Notice that the rhymes are printed starting with a capital letter and followed by all lower case.
 
 #### PhonemeDictionary
 
-The `PhonemeDictionary` class provides access to helper methods for *cmudict.0.7.a*, the text file containing version 
+The `PhonemeDictionary` class provides access to helper methods for *cmudict.0.7.a*, the text file containing version
 0.7a (from 2008) of CMUDict. The dictionary file is read in the constructor. For each line in the dictionary, we need to
-determine if the line contains a word and its phonemes, or just comments explaining the dictionary. If the line is a 
+determine if the line contains a word and its phonemes, or just comments explaining the dictionary. If the line is a
 phoneme entry, the line needs to be parsed. We need to get the word from the line, and separate it from it's phonemes. A
-phoneme entry has the following format: the word, followed by two spaces, and then a list of phonemes. Each phoneme is 
-separated by a single space. Here is the entry for "academy": `ACADEMY  AH0 K AE1 D AH0 M IY0`. 
+phoneme entry has the following format: the word, followed by two spaces, and then a list of phonemes. Each phoneme is
+separated by a single space. Here is the entry for "academy": `ACADEMY  AH0 K AE1 D AH0 M IY0`.
 
-In the resources folder you will find the dictionary file, *cmudict.0.7.a*. A second file has been included, 
+In the resources folder you will find the dictionary file, *cmudict.0.7.a*. A second file has been included,
 *miniCmuDict.txt* that is a mini version of *cmudict.0.7.a*. When developing, you may find it easier to work with a
-file with fewer words. You can switch between the files by changing the value of `DICTIONARY_FILE_PATH`, a constant in 
+file with fewer words. You can switch between the files by changing the value of `DICTIONARY_FILE_PATH`, a constant in
 the `PhonemeDictionary` class. Feel free to edit the *miniCmuDict.txt* to include additional words to make your testing easier.
 
 You'll need to implement the following methods in the `PhonemeDictionary` class:
 * `boolean isPhonemeEntry(String line)`: This is the method we use when reading in the lines of the text file containing
-   the dictionary. The method should return true if the String it's looking at is a valid phoneme entry as described 
-   above. If you open up the `cmudict.0.7a.txt` file, you'll see that the first 50-ish lines don't contain actual 
+   the dictionary. The method should return true if the String it's looking at is a valid phoneme entry as described
+   above. If you open up the `cmudict.0.7a.txt` file, you'll see that the first 50-ish lines don't contain actual
    entries; they're just comments telling you about the dictionary. We want to make sure we don't include those lines as
    dictionary entries.
 
-* `String getWordFromLine(String line)`: This method should return the word component of a dictionary line. So if the 
+* `String getWordFromLine(String line)`: This method should return the word component of a dictionary line. So if the
    line is "ACADEMY  AH0 K AE1 D AH0 M IY0", then you'll want to return "ACADEMY".
 
-* `List<String> getPhonemesFromLine(String line)`: This method should return a list containing the phonemes of a 
+* `List<String> getPhonemesFromLine(String line)`: This method should return a list containing the phonemes of a
    dictionary line as separate entries. So if the line is "ACADEMY  AH0 K AE1 D AH0 M IY0", then you'll want to return
    { "AH0", "K", "AE1", "D", "AH0", "M", "IY0" }.
 
@@ -188,31 +188,31 @@ You'll need to implement the following methods in the `PhonemeDictionary` class:
 
 #### WordRhymer
 
-The `WordRhymer` class is an intermediary between the `PhonemeDictionary` and `RhymeGenerator` classes. Its primary 
-function is to determine if two words rhyme. It also provides users of the class with the words that it can make rhyming 
+The `WordRhymer` class is an intermediary between the `PhonemeDictionary` and `RhymeGenerator` classes. Its primary
+function is to determine if two words rhyme. It also provides users of the class with the words that it can make rhyming
 decisions about.
 
 You'll need to implement the following method in the WordRhymer class:
-* `boolean checkForRhyme(String word, String possibleRhyme)`: This method determines if two words rhyme. It checks if 
-   the final three phonemes of each word match. If so, it returns true, and false otherwise. Some words have fewer than 
+* `boolean checkForRhyme(String word, String possibleRhyme)`: This method determines if two words rhyme. It checks if
+   the final three phonemes of each word match. If so, it returns true, and false otherwise. Some words have fewer than
    three phonemes. In that case, the word with fewer phonemes mutch have a match on all phonemes. For example, if we are
-   trying to rhyme with *at* (AT  AE1 T), then both `AE1` and `T` would need to match the final two phonemes of the 
+   trying to rhyme with *at* (AT  AE1 T), then both `AE1` and `T` would need to match the final two phonemes of the
    other word.
 
 #### RhymeGenerator
 
-* `List<String> findRhymingWords(String wordToRhyme, int numRhymingWords)`: This is the method that is called in the 
-   `main()` method in the Main class once the user gives the word that they want to rhyme and the number of rhyming 
+* `List<String> findRhymingWords(String wordToRhyme, int numRhymingWords)`: This is the method that is called in the
+   `main()` method in the Main class once the user gives the word that they want to rhyme and the number of rhyming
    words they want to find. You'll return a List with up to `numRhymingWords` words in it that rhyme with `wordToRhyme`.
-   The only reason to return a List shorter than `numRhymingWords` in length is if there aren't that many rhyming words 
-   in the dictionary that rhyme. For example, if you called `findRhymingWords("Educate", 3)`, you could return 
-   ["DOMESTICATE", "COMMUNICATE", "PONTIFICATE"]. NOTE: make sure that you do not include the word itself as a rhyming 
+   The only reason to return a List shorter than `numRhymingWords` in length is if there aren't that many rhyming words
+   in the dictionary that rhyme. For example, if you called `findRhymingWords("Educate", 3)`, you could return
+   ["DOMESTICATE", "COMMUNICATE", "PONTIFICATE"]. NOTE: make sure that you do not include the word itself as a rhyming
    word in the list you return.
 
 ### Test classes
 
 These classes contain the test code for the application classes. Each of the test classes has its own run configuration.
-To run the tests for a given test class, select the corresponding configuration at the top right corner of the screen 
+To run the tests for a given test class, select the corresponding configuration at the top right corner of the screen
 and click the run button to the right.
 
 #### WordRhymerTest
@@ -234,15 +234,15 @@ You'll write your tests for the `WordRhymer` class here. You'll need to implemen
       three or more phonemes
       Ex: at & cat
    * `checkForRhyme_notRhymes_wordLessThanThreePhonemes`:
-      checkForRhyme returns false when the word argument has less than three phonemes, and the possibleRhyme argument 
+      checkForRhyme returns false when the word argument has less than three phonemes, and the possibleRhyme argument
       has three or more phonemes
       Ex: at & banana
    * `checkForRhyme_rhymes_possibleRhymeLessThanThreePhonemes`:
-      checkForRhyme returns true when the word argument has three or more phonemes, and the possibleRhyme argument has 
+      checkForRhyme returns true when the word argument has three or more phonemes, and the possibleRhyme argument has
       less than three phonemes
-      Ex: knit & it 
+      Ex: knit & it
    * `checkForRhyme_notRhymes_possibleRhymeLessThanThreePhonemes`:
-      checkForRhyme returns false when the word argument has three or more phonemes, and the possibleRhyme argument has 
+      checkForRhyme returns false when the word argument has three or more phonemes, and the possibleRhyme argument has
       less than three phonemes
       Ex: crab & it
 
@@ -251,12 +251,12 @@ You'll write your tests for the `WordRhymer` class here. You'll need to implemen
 ### Improve the rhyming algorithm
 
 Our rhyming algorithm isn't perfect. For example, when you try to rhyme "orange" or "silver", some of the words we get
-don't actually rhyme. Another place we our algorithm could be improved is when we have words with less than three 
+don't actually rhyme. Another place we our algorithm could be improved is when we have words with less than three
 phonemes. To rhyme with the word "fish", a word has to have "fish" at the end. Can you do better?
 
 ### Dictionary words with '_' in them
 
-The dictionary has words that contain an underscore. The underscore represents a space. Can you enhance your rhyming 
+The dictionary has words that contain an underscore. The underscore represents a space. Can you enhance your rhyming
 algorithm so that if a user asks for rhymes of "recourse" you return "Air force"? Can you enhance it so a user can enter
 "air force" and you generate "recourse" as a rhyme?
 
