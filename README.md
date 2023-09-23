@@ -1,5 +1,27 @@
 # Project: String Manipulation
 
+## Table of Contents
+
+- [Project: String Manipulation](#project-string-manipulation)
+  - [Table of Contents](#table-of-contents)
+  - [Good work pledge](#good-work-pledge)
+  - [Getting started](#getting-started)
+  - [Project overview](#project-overview)
+  - [Program contents](#program-contents)
+    - [Application classes](#application-classes)
+      - [Main](#main)
+      - [PhonemeDictionary](#phonemedictionary)
+      - [WordRhymer](#wordrhymer)
+      - [RhymeGenerator](#rhymegenerator)
+    - [Test classes](#test-classes)
+      - [WordRhymerTest](#wordrhymertest)
+  - [Extra credit](#extra-credit)
+    - [Improve the rhyming algorithm](#improve-the-rhyming-algorithm)
+    - [Dictionary words with '\_' in them](#dictionary-words-with-_-in-them)
+    - [Rhyme words that aren't in the dictionary](#rhyme-words-that-arent-in-the-dictionary)
+  - [Committing your Changes and Turning In The Project](#committing-your-changes-and-turning-in-the-project)
+  - [Grading](#grading)
+
 ## Good work pledge
 
 We are here to broaden your exposure to Computer Science. We can only achieve that purpose when you work hard and
@@ -8,9 +30,9 @@ You will be cheating yourself from the most valuable thing course has to offer o
 
 We know that hard, and honest work doesn't come easily. If you feel like you are falling behind
 
-1.  Don't copy-paste code, or let someone do your work for you
-2.  Ask for help!
-3.  Tell the teaching-team you need more time
+1. Don't copy-paste code, or let someone do your work for you
+2. Ask for help!
+3. Tell the teaching-team you need more time
 
 ## Getting started
 
@@ -124,7 +146,7 @@ Therefore, **for this project**, we can conclude that words rhyme when the follo
 - The words have the same final phonemes in the same order
 - The phonemes that match also have the same stress markers
 
-For more information about CMUDict, check out http://www.speech.cs.cmu.edu/cgi-bin/cmudict.
+For more information about CMUDict, check out <http://www.speech.cs.cmu.edu/cgi-bin/cmudict>.
 
 ## Program contents
 
