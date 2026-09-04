@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="AllProvidedTests" type="JUnit" factoryName="JUnit">
+    <module name="StringProcessingRhymingWords" />
+    <option name="TEST_OBJECT" value="pattern" />
+    <option name="VM_PARAMETERS" value="-ea" />
+    <patterns>
+      <pattern testClass="PhonemeDictionaryTest" />
+      <pattern testClass="RhymeGeneratorTest" />
+    </patterns>
+    <method />
+  </configuration>
+</component>

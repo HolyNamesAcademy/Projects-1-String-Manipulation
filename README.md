@@ -36,17 +36,14 @@ We know that hard, and honest work doesn't come easily. If you feel like you are
 
 ## Getting started
 
-1. Go to the provided assignment link, and click accept. It should take you to your project page.
-   (If it doesn't, click on the link above again, and click on the link to the project page).
-1. On the GitHub project page, click on the green "Clone or Download" button and copy the link.
-1. Open Intellij, click on the "Checkout from Version Control" drop down and select "GitHub"
-1. On the next page paste the link you copied into the "Git Repository URL" box.
-1. Click Clone. You may have to enter your GitHub username and password.
-1. If it asks you whether you want to open the project or not, select yes.
-1. You should see your project open. If you need to reopen the project, you should see it under "File > Open Recent"
-1. If you click on the drop-down menu of run configurations, you should see "Main", "RhymeGeneratorTest",
-   "WordRhymerTest", and "PhonemeDictionaryTest" as options. You should be able to run all of them. If any of the
-   configurations are missing, call an instructor over.
+1. Open the assignment link your teacher posts in **Teams** or **OneNote**, and accept the assignment. GitHub will create a private project just for you.
+2. On your new project page, click the green **Code** button, copy the link, and clone the project into IntelliJ (File → New → Project from Version Control, then paste the link).
+3. When IntelliJ asks if you trust the project, say yes / trust it so it can finish setting things up.
+4. If IntelliJ asks you to pick a Java version (JDK), choose **17** or newer.
+5. Use the green play **dropdown** near the top-right of IntelliJ. You should see options like `Main`, `PhonemeDictionaryTest`, `RhymeGeneratorTest`, `WordRhymerTest`, `PhonemeDictionaryUtilitiesTest`, and `AllProvidedTests`. You can stay in the file you are editing — you do not need to open a different file first.
+
+If anything looks confusing the first time you open the project, ask a teacher — IntelliJ asks a few one-time setup questions, and then day-to-day work is just writing code and using that green play button.
+
 
 ## Project overview
 
@@ -301,20 +298,16 @@ word and finding rhyming words for the similar word.
 
 ## Committing your Changes and Turning In The Project
 
-The same instructions with screenshots are in the OneNote [here](https://holynamesseattle-my.sharepoint.com/personal/ecudaback_holynames-sea_org/_layouts/OneNote.aspx?id=%2Fpersonal%2Fecudaback_holynames-sea_org%2FDocuments%2FClass%20Notebooks%2FProjects%20in%20CS%20MW%20P7%2017-18&wd=target%28_Content%20Library%2FUsing%20the%20Content%20Library.one%7CAF912239-6A74-48A4-BA23-3D819CB96383%2FIntelliJ%20Setup%7CEA8F2C82-E1EE-459F-8521-D24F0460F650%2F%29).
+At the end of every class period, commit and push your work from IntelliJ:
 
-At the end of every class period, you should commit your changes. "Committing your changes" is basically a fancy way of saving the changes you made. It is very important and useful for two reasons:
+1. Click **Git > Commit…** (or use the Commit tool window).
+2. Review the changed files. You can double-click a file to see the diff.
+3. Enter a short commit message, then choose **Commit and Push…**.
+4. Confirm the push to your project's `main` branch.
+5. On GitHub, confirm your latest commits are visible.
 
-1. You save your changes online, so you can never lose them. Even if your computer breaks, your changes will still be saved somewhere.
-2. You can go back to any previous version that you committed. So if you accidentally make a wrong change that breaks your program, you can always go back to a state where the program was working.
+Pushing to `main` is how you turn in work for this assignment. Autograding runs on those pushes. You can keep improving and pushing after the deadline if your teacher allows late work — ask about any late penalty.
 
-You can commit and push ("push" means send it to GitHub.com to save it there) by doing the steps below:
-
-1. Once you are ready to save your changes, click on VCS > Commit Changes… in the taskbar.
-2. It will show you a list of files that you have made changes to. (It might also show changes to a file called workspace.xml, which you didn’t touch. That's ok, IntelliJ modifies that file behind the scenes). You can double click on any file and see the changes you've made to the file.
-3. Hover over the commit button and select "Commit and Push". It will prompt you, asking if you are sure. Select "Commit", and then on the next page, select "Push".
-4. Go to your project page on GitHub, and make sure that your changes are there.
-5. That's it. The last change you submit before the deadline will be considered your turned in assignment. You can turn in additional submissions after the deadline, but remember that there is a 10% penalty added each week after the deadline you turn in the assignment.
 
 ## Grading
 
