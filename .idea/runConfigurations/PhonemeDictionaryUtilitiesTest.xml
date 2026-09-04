@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="PhonemeDictionaryUtilitiesTest" type="JUnit" factoryName="JUnit">
+    <module name="StringProcessingRhymingWords" />
+    <option name="MAIN_CLASS_NAME" value="PhonemeDictionaryUtilitiesTest" />
+    <option name="TEST_OBJECT" value="class" />
+    <option name="VM_PARAMETERS" value="-ea" />
+    <method />
+  </configuration>
+</component>
