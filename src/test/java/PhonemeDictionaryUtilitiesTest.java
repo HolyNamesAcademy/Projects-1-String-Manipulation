@@ -1,10 +1,5 @@
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.Assert.*;
-
 public class PhonemeDictionaryUtilitiesTest {
     @Test
     //TODO - implement me!
@@ -18,8 +13,7 @@ public class PhonemeDictionaryUtilitiesTest {
         // Assert
         //// Check isPhonemeEntry returned the correct result
 
-        //// Delete the line below once you start writing the real test
-        assertTrue(false);
+        // TODO: replace with real assertTrue/assertFalse/assertEquals
     }
 
     @Test
@@ -34,8 +28,7 @@ public class PhonemeDictionaryUtilitiesTest {
         // Assert
         //// Check isPhonemeEntry returned the correct result
 
-        //// Delete the line below once you start writing the real test
-        assertTrue(false);
+        // TODO: replace with real assertTrue/assertFalse/assertEquals
     }
 
     @Test
@@ -50,8 +43,7 @@ public class PhonemeDictionaryUtilitiesTest {
         // Assert
         //// Check getWordFromLine returned the correct word and nothing more
 
-        //// Delete the line below once you start writing the real test
-        assertTrue(false);
+        // TODO: replace with real assertTrue/assertFalse/assertEquals
     }
 
     @Test
@@ -67,7 +59,6 @@ public class PhonemeDictionaryUtilitiesTest {
         // Assert
         //// Check getPhonemesFromLine returned the correct list
 
-        //// Delete the line below once you start writing the real test
-        assertTrue(false);
+        // TODO: replace with real assertTrue/assertFalse/assertEquals
     }
 }

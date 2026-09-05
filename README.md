@@ -41,6 +41,7 @@ We know that hard, and honest work doesn't come easily. If you feel like you are
 3. When IntelliJ asks if you trust the project, say yes / trust it so it can finish setting things up.
 4. If IntelliJ asks you to pick a Java version (JDK), choose **17** or newer.
 5. Use the green play **dropdown** near the top-right of IntelliJ. You should see options like `Main`, `PhonemeDictionaryTest`, `RhymeGeneratorTest`, `WordRhymerTest`, `PhonemeDictionaryUtilitiesTest`, and `AllProvidedTests`. You can stay in the file you are editing — you do not need to open a different file first.
+6. Start with **`PhonemeDictionaryUtilitiesTest`** and **`WordRhymerTest`** (they use the mini test dictionary). Run **`Main`** only after those pieces work — `Main` loads the full CMUDict file and is slower to debug against.
 
 If anything looks confusing the first time you open the project, ask a teacher — IntelliJ asks a few one-time setup questions, and then day-to-day work is just writing code and using that green play button.
 
@@ -153,7 +154,7 @@ The program contains application classes and tests. The main classes are `Phonem
 
 You will implement code in `PhonemeDictionaryUtilities`, `WordRhymer`, `RhymeGenerator`, and `Main`.
 You will also fill in the student tests in `PhonemeDictionaryUtilitiesTest` and `WordRhymerTest`
-(replace the placeholder `assertTrue(false)` lines with real checks). `PhonemeDictionaryTest` and
+(replace the `// TODO: replace with real assertTrue/assertFalse/assertEquals` placeholders with real checks). `PhonemeDictionaryTest` and
 `RhymeGeneratorTest` are already written for you.
 
 ### Application classes
@@ -198,18 +199,11 @@ the `PhonemeDictionary` class. Feel free to edit the _miniCmuDict.txt_ to includ
 
 You'll need to implement the following methods in the **`PhonemeDictionaryUtilities`** class (called from `PhonemeDictionary`):
 
-- `boolean isPhonemeEntry(String line)`: This is the method we use when reading in the lines of the text file containing
-  the dictionary. The method should return true if the String it's looking at is a valid phoneme entry as described
-  above. If you open up the `cmudict.0.7a.txt` file, you'll see that the first 50-ish lines don't contain actual
-  entries; they're just comments telling you about the dictionary (often starting with `;;;`). We want to make sure we don't include those lines as
-  dictionary entries.
+- `boolean isPhonemeEntry(String line)`: Return true for phoneme entries; return false for comment lines and empty lines. Comment lines in the dictionary start with `;;;` (you'll see forms like `;;;`, `;;; # …`, and `;;;  NOTES…`).
 
-- `String getWordFromLine(String line)`: This method should return the word component of a dictionary line. So if the
-  line is `ACADEMY  AH0 K AE1 D AH0 M IY0`, then you'll want to return `"ACADEMY"`.
+- `String getWordFromLine(String line)`: Return the word before the two-space delimiter. Example: `ACADEMY  AH0 K AE1 D AH0 M IY0` → `"ACADEMY"`. Watch out: splitting only on a single space `" "` will not treat the double space the way you expect.
 
-- `List<String> getPhonemesFromLine(String line)`: This method should return a list containing the phonemes of a
-  dictionary line as separate entries. So if the line is `ACADEMY  AH0 K AE1 D AH0 M IY0`, then you'll want to return
-  `{ "AH0", "K", "AE1", "D", "AH0", "M", "IY0" }`.
+- `List<String> getPhonemesFromLine(String line)`: Return the phonemes after the word (each phoneme separated by a single space). Example: `{ "AH0", "K", "AE1", "D", "AH0", "M", "IY0" }`.
 
 `PhonemeDictionary` also has the following methods that will be helpful when developing your rhyming algorithm:
 
@@ -225,11 +219,7 @@ decisions about.
 
 You'll need to implement the following method in the WordRhymer class:
 
-- `boolean checkForRhyme(String word, String possibleRhyme)`: This method determines if two words rhyme. It checks if
-  the final three phonemes of each word match. If so, it returns true, and false otherwise. Some words have fewer than
-  three phonemes. In that case, the word with fewer phonemes must have a match on all phonemes. For example, if we are
-  trying to rhyme with _at_ (AT AE1 T), then both `AE1` and `T` would need to match the final two phonemes of the
-  other word.
+- `boolean checkForRhyme(String word, String possibleRhyme)`: These parameters are **English words** (look up their phonemes with the dictionary). Two words rhyme when their final three phonemes match, including stress digits on those tokens (e.g. `EY2` is not the same as `EY1`). If either word has fewer than three phonemes, all phonemes of the shorter word must match the end of the longer word. A word does not rhyme with itself. Words that are not in the dictionary have no phonemes and should not count as rhymes.
 
 #### RhymeGenerator
 
