@@ -147,10 +147,14 @@ For more information about CMUDict, check out <http://www.speech.cs.cmu.edu/cgi-
 
 ## Program contents
 
-The program contains two packages: _main_ and _test_. The _main_ package contains four application
-classes: `PhonemeDictionary`, `WordRhymer`, `RhymeGenerator`, and `Main`. The _test_ package contains three test
-classes: `PhonemeDictionaryTest`, `WordRhymerTest`, `RhymeGeneratorTest`. You will make changes to `PhonemeDictionary`,
-`WordRhymer`, `RhymeGenerator`, `Main`, and `WordRhymerTest`.
+The program contains application classes and tests. The main classes are `PhonemeDictionary`,
+`PhonemeDictionaryUtilities`, `WordRhymer`, `RhymeGenerator`, and `Main`. The tests are
+`PhonemeDictionaryTest`, `PhonemeDictionaryUtilitiesTest`, `WordRhymerTest`, and `RhymeGeneratorTest`.
+
+You will implement code in `PhonemeDictionaryUtilities`, `WordRhymer`, `RhymeGenerator`, and `Main`.
+You will also fill in the student tests in `PhonemeDictionaryUtilitiesTest` and `WordRhymerTest`
+(replace the placeholder `assertTrue(false)` lines with real checks). `PhonemeDictionaryTest` and
+`RhymeGeneratorTest` are already written for you.
 
 ### Application classes
 
@@ -183,29 +187,29 @@ You will implement one method in this class:
 The `PhonemeDictionary` class provides access to helper methods for _cmudict.0.7.a_, the text file containing version
 0.7a (from 2008) of CMUDict. The dictionary file is read in the constructor. For each line in the dictionary, we need to
 determine if the line contains a word and its phonemes, or just comments explaining the dictionary. If the line is a
-phoneme entry, the line needs to be parsed. We need to get the word from the line, and separate it from it's phonemes. A
-phoneme entry has the following format: the word, followed by two spaces, and then a list of phonemes. Each phoneme is
-separated by a single space. Here is the entry for "academy": `ACADEMY  AH0 K AE1 D AH0 M IY0`.
+phoneme entry, the line needs to be parsed. We need to get the word from the line, and separate it from its phonemes. A
+phoneme entry has the following format: the word, followed by **exactly two spaces**, and then a list of phonemes. Each phoneme is
+separated by a single space. Here is the entry for "academy": `ACADEMY  AH0 K AE1 D AH0 M IY0` (notice the two spaces after `ACADEMY`).
 
 In the resources folder you will find the dictionary file, _cmudict.0.7.a_. A second file has been included,
 _miniCmuDict.txt_ that is a mini version of _cmudict.0.7.a_. When developing, you may find it easier to work with a
 file with fewer words. You can switch between the files by changing the value of `DICTIONARY_FILE_PATH`, a constant in
 the `PhonemeDictionary` class. Feel free to edit the _miniCmuDict.txt_ to include additional words to make your testing easier.
 
-You'll need to implement the following methods in the `PhonemeDictionary` class:
+You'll need to implement the following methods in the **`PhonemeDictionaryUtilities`** class (called from `PhonemeDictionary`):
 
 - `boolean isPhonemeEntry(String line)`: This is the method we use when reading in the lines of the text file containing
   the dictionary. The method should return true if the String it's looking at is a valid phoneme entry as described
   above. If you open up the `cmudict.0.7a.txt` file, you'll see that the first 50-ish lines don't contain actual
-  entries; they're just comments telling you about the dictionary. We want to make sure we don't include those lines as
+  entries; they're just comments telling you about the dictionary (often starting with `;;;`). We want to make sure we don't include those lines as
   dictionary entries.
 
 - `String getWordFromLine(String line)`: This method should return the word component of a dictionary line. So if the
-  line is "ACADEMY AH0 K AE1 D AH0 M IY0", then you'll want to return "ACADEMY".
+  line is `ACADEMY  AH0 K AE1 D AH0 M IY0`, then you'll want to return `"ACADEMY"`.
 
 - `List<String> getPhonemesFromLine(String line)`: This method should return a list containing the phonemes of a
-  dictionary line as separate entries. So if the line is "ACADEMY AH0 K AE1 D AH0 M IY0", then you'll want to return
-  { "AH0", "K", "AE1", "D", "AH0", "M", "IY0" }.
+  dictionary line as separate entries. So if the line is `ACADEMY  AH0 K AE1 D AH0 M IY0`, then you'll want to return
+  `{ "AH0", "K", "AE1", "D", "AH0", "M", "IY0" }`.
 
 `PhonemeDictionary` also has the following methods that will be helpful when developing your rhyming algorithm:
 
@@ -223,7 +227,7 @@ You'll need to implement the following method in the WordRhymer class:
 
 - `boolean checkForRhyme(String word, String possibleRhyme)`: This method determines if two words rhyme. It checks if
   the final three phonemes of each word match. If so, it returns true, and false otherwise. Some words have fewer than
-  three phonemes. In that case, the word with fewer phonemes mutch have a match on all phonemes. For example, if we are
+  three phonemes. In that case, the word with fewer phonemes must have a match on all phonemes. For example, if we are
   trying to rhyme with _at_ (AT AE1 T), then both `AE1` and `T` would need to match the final two phonemes of the
   other word.
 
