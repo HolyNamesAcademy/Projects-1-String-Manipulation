@@ -35,6 +35,7 @@ public class PhonemeDictionaryUtilities {
      * @return a list containing the phonemes of the word in order.
      */
     //TODO - implement me!
+    // Skip the word and the blank token produced by the double-space delimiter before collecting phonemes.
     public static List<String> getPhonemesFromLine(String line) {
         List<String> phonemeList = new ArrayList<>();
         return phonemeList;

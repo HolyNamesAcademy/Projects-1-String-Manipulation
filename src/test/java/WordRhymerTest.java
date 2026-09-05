@@ -1,8 +1,5 @@
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 /**
  * Test class for WordRhymer
  */
@@ -23,8 +20,7 @@ public class WordRhymerTest {
         // Assert
         //// Check checkForRhyme returned the correct result
 
-        //// Delete the line below once you start writing the real test
-        assertTrue(false);
+        // TODO: replace with real assertTrue/assertFalse/assertEquals
     }
 
     @Test
@@ -40,8 +36,7 @@ public class WordRhymerTest {
         // Assert
         //// Check checkForRhyme returned the correct result
 
-        //// Delete the line below once you start writing the real test
-        assertTrue(false);
+        // TODO: replace with real assertTrue/assertFalse/assertEquals
     }
 
     @Test
@@ -57,8 +52,7 @@ public class WordRhymerTest {
         // Assert
         //// Check checkForRhyme returned the correct result
 
-        //// Delete the line below once you start writing the real test
-        assertTrue(false);
+        // TODO: replace with real assertTrue/assertFalse/assertEquals
     }
 
     @Test
@@ -74,8 +68,7 @@ public class WordRhymerTest {
         // Assert
         //// Check checkForRhyme returned the correct result
 
-        //// Delete the line below once you start writing the real test
-        assertTrue(false);
+        // TODO: replace with real assertTrue/assertFalse/assertEquals
     }
 
     @Test
@@ -91,8 +84,7 @@ public class WordRhymerTest {
         // Assert
         //// Check checkForRhyme returned the correct result
 
-        //// Delete the line below once you start writing the real test
-        assertTrue(false);
+        // TODO: replace with real assertTrue/assertFalse/assertEquals
     }
 
     @Test
@@ -108,8 +100,7 @@ public class WordRhymerTest {
         // Assert
         //// Check checkForRhyme returned the correct result
 
-        //// Delete the line below once you start writing the real test
-        assertTrue(false);
+        // TODO: replace with real assertTrue/assertFalse/assertEquals
     }
 
     @Test
@@ -125,7 +116,6 @@ public class WordRhymerTest {
         // Assert
         //// Check checkForRhyme returned the correct result
 
-        //// Delete the line below once you start writing the real test
-        assertTrue(false);
+        // TODO: replace with real assertTrue/assertFalse/assertEquals
     }
 }
