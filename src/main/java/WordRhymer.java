@@ -27,8 +27,6 @@ public class WordRhymer {
      * @return true if possibleRhyme rhymes with word per the phoneme matching rules
      */
     //TODO - implement me!
-    // Look up phonemes with phonemeDictionary.getPhonemes(word) and getPhonemes(possibleRhyme).
-    // Empty phoneme list → false; same word (equalsIgnoreCase) → false; then compare tails.
     public boolean checkForRhyme(String word, String possibleRhyme) {
         return false;
     }

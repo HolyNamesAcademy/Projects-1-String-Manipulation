@@ -199,11 +199,11 @@ the `PhonemeDictionary` class. Feel free to edit the _miniCmuDict.txt_ to includ
 
 You'll need to implement the following methods in the **`PhonemeDictionaryUtilities`** class (called from `PhonemeDictionary`):
 
-- `boolean isPhonemeEntry(String line)`: Return true for any **non-empty** line that does **not** start with `;;;` (comment lines such as `;;;`, `;;; # …`, and `;;;  NOTES…` are not entries). Empty lines are not entries.
+- `boolean isPhonemeEntry(String line)`: Return true for phoneme entries; return false for comment lines and empty lines. Comment lines in the dictionary start with `;;;` (you'll see forms like `;;;`, `;;; # …`, and `;;;  NOTES…`).
 
-- `String getWordFromLine(String line)`: Return the word before the delimiter. Prefer `indexOf("  ")` or `split("\\s+")` with empty-token handling — **not** `split(" ")` alone (a single-space split on the double space creates empty strings between the word and phonemes). Example: `ACADEMY  AH0 K AE1 D AH0 M IY0` → `"ACADEMY"`.
+- `String getWordFromLine(String line)`: Return the word before the two-space delimiter. Example: `ACADEMY  AH0 K AE1 D AH0 M IY0` → `"ACADEMY"`. Watch out: splitting only on a single space `" "` will not treat the double space the way you expect.
 
-- `List<String> getPhonemesFromLine(String line)`: Return phonemes after the word, skipping the word and the blank token from the double-space delimiter. Same delimiter advice as above. Example: `{ "AH0", "K", "AE1", "D", "AH0", "M", "IY0" }`.
+- `List<String> getPhonemesFromLine(String line)`: Return the phonemes after the word (each phoneme separated by a single space). Example: `{ "AH0", "K", "AE1", "D", "AH0", "M", "IY0" }`.
 
 `PhonemeDictionary` also has the following methods that will be helpful when developing your rhyming algorithm:
 
@@ -217,21 +217,9 @@ The `WordRhymer` class is an intermediary between the `PhonemeDictionary` and `R
 function is to determine if two words rhyme. It also provides users of the class with the words that it can make rhyming
 decisions about.
 
-**Rhyme checklist** (implement in this order):
-
-1. Reject the same word (`equalsIgnoreCase`).
-2. Reject if either phoneme list is empty — unknown words must not rhyme (e.g. Balogna).
-3. Match the last `min(3, lenA, lenB)` phonemes with exact equality (stress digits stay on the token, e.g. `EY2` ≠ `EY1`).
-4. Use **phoneme-list size**, not `String.length()`.
-
-Worked examples:
-
-- **ICE / PRICE** — both have only 2 phonemes, so compare both: `AY1 S` matches.
-- **COMPLICATE / INDICATE** — both end with `K EY2 T` (3 phonemes).
-
 You'll need to implement the following method in the WordRhymer class:
 
-- `boolean checkForRhyme(String word, String possibleRhyme)`: English words (not raw phoneme strings). Look up phonemes with `phonemeDictionary.getPhonemes(word)`. Compare the final phonemes using the checklist above. Some words have fewer than three phonemes; in that case, compare all phonemes of the shorter word against the tail of the longer word. For example, rhyming with _at_ (AE1 T) requires both `AE1` and `T` to match the final two phonemes of the other word.
+- `boolean checkForRhyme(String word, String possibleRhyme)`: These parameters are **English words** (look up their phonemes with the dictionary). Two words rhyme when their final three phonemes match, including stress digits on those tokens (e.g. `EY2` is not the same as `EY1`). If either word has fewer than three phonemes, all phonemes of the shorter word must match the end of the longer word. A word does not rhyme with itself. Words that are not in the dictionary have no phonemes and should not count as rhymes.
 
 #### RhymeGenerator
 

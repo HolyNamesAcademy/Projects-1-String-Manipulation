@@ -18,7 +18,8 @@ public class PhonemeDictionaryUtilities {
     }
 
     /**
-     * Get the word component of a dictionary line. Lines are of the format: WORD PH1 PH2 PH3
+     * Get the word component of a dictionary line. Lines are of the format: WORD  PH1 PH2 PH3
+     * (word, then two spaces, then phonemes).
      *
      * @param line - the dictionary line we want to extract the word from
      * @return the word part of line
@@ -29,13 +30,13 @@ public class PhonemeDictionaryUtilities {
     }
 
     /**
-     * Get the phonemes component from a dictionary line. Lines are of the format: WORD PH1 PH2 PH3
+     * Get the phonemes component from a dictionary line. Lines are of the format: WORD  PH1 PH2 PH3
+     * (word, then two spaces, then phonemes separated by single spaces).
      *
      * @param line - the dictionary line we want to get the phonemes from
      * @return a list containing the phonemes of the word in order.
      */
     //TODO - implement me!
-    // Skip the word and the blank token produced by the double-space delimiter before collecting phonemes.
     public static List<String> getPhonemesFromLine(String line) {
         List<String> phonemeList = new ArrayList<>();
         return phonemeList;
